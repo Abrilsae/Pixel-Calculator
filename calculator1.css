@@ -1,0 +1,82 @@
+/* Import pixel font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  background: #fdf5b1; 
+  font-family: 'Press Start 2P', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Calculator container */
+.calcu {
+  background: #ffe3ee; 
+  border: 8px solid #FF8FC1; 
+  padding: 20px;
+  width: 320px;
+  image-rendering: pixelated;
+  box-shadow: 8px 8px 0px #ac1670; 
+}
+
+/* Display area */
+.display {
+  background: #FFFDEB; 
+  border: 4px solid #FF8FC1; 
+  padding: 15px;
+  text-align: right;
+  margin-bottom: 15px;
+  font-size: 14px;
+  min-height: 50px;
+  overflow-x: auto;
+}
+
+/* Calculator keys grid */
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+/* General button style */
+button {
+  font-family: 'Press Start 2P', cursive;
+  background: #B8E6EB; 
+  border: 4px solid #6fa3a6; 
+  padding: 15px 0;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px #2b686b;
+  transition: transform 0.05s ease;
+}
+
+/* Button pressed effect */
+button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #96C8CB;
+}
+
+/* Different button colors */
+button.op {
+  background: #ffedf5;
+  border: 4px solid #ffa7cd;
+  box-shadow: 4px 4px 0px #a85b7d;
+}
+
+button.danger {
+  background: #e9d0ff; 
+  border: 4px solid #c26dce;
+  box-shadow: 4px 4px 0px #821a94;
+}
+
+button.accent {
+  background: #d3ffe0; 
+  border: 4px solid #5ea55c;
+  box-shadow: 4px 4px 0px #298c27;
+}
+
+/* Zero button spans 2 columns */
+.key-2 {
+  grid-column: span 2;
+}
